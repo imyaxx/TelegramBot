@@ -1,0 +1,21 @@
+services:
+  bot:
+    build: ./src              # <-- БЫЛО ./app, СТАЛО ./src
+    container_name: rhyme_bot
+    restart: always
+    env_file:
+      - ./src/.env            # <-- БЫЛО ./app/.env, СТАЛО ./src/.env
+    environment:
+      - MONGODB_URI=mongodb://mongo:27017/rhymebot
+    depends_on:
+      - mongo
+
+  mongo:
+    image: mongo:latest
+    container_name: rhyme_mongo
+    restart: always
+    volumes:
+      - mongo_data:/data/db
+
+volumes:
+  mongo_data:
