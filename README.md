@@ -10,11 +10,19 @@
 
 ## Стек технологий
 * **Core:** Node.js (JavaScript)
+* **Container:** Docker + Docker Compose
 * **Telegram:** node-telegram-bot-api
 * **AI:** OpenAI API (GPT-3.5 Turbo)
 * **Database:** MongoDB + Mongoose
 * **Tools:** Dotenv, Git
 
+## Быстрый старт (Docker)
+
+Вам не нужно устанавливать Node.js или MongoDB. Достаточно только [Docker Desktop](https://www.docker.com/products/docker-desktop/).
+
+Запуск через Docker:
+
+docker-compose up --build
 ---
 
 ##  Предварительные требования
